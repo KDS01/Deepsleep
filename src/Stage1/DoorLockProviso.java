@@ -1,4 +1,4 @@
-package provisoChoice;
+package Stage1;
 
 public class DoorLockProviso extends ChoiceObject {
 	{

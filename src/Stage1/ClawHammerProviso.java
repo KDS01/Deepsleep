@@ -1,6 +1,6 @@
-package provisoChoice;
+package Stage1;
 
-public class ClawHammer extends ChoiceObject {
+public class ClawHammerProviso extends ChoiceObject {
 	{
 		this.choicename="장도리";
 		this.choiceObjectLines="뒷면에 못을 뽑을 수 있는 노루발 모양의 못뽑이가 달린 작은 망치."

@@ -1,4 +1,6 @@
-package provisoChoice;
+package Stage2;
+
+import Stage1.ChoiceObject;
 
 public class SofaProviso extends ChoiceObject {
 	{

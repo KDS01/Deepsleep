@@ -4,5 +4,5 @@
 /**
  * 
  */
-module deepsleep {
+module Deepsleep1 {
 }
