@@ -2,6 +2,7 @@ package deepsleep;
 import java.util.Scanner;
 
 import Stage1.ClawHammer;
+import Stage1.ClawHammerProviso;
 import Stage1.DoorLockProviso;
 import Stage1.FrontDoorProviso;
 import Stage1.LightProviso;
@@ -28,50 +29,16 @@ import Stage3.ToiletProviso;
 import provisoChoice.*;
 
 import provisoChoice.ProvisoNames;
-public class Basic {
 
 
-
-
-
-}
-class Narrator extends AllLines {
+public class Narrator {
 	public void Narration(String[] a)
 	{
 		for(int i=0; i<a.length; i++) 
 		{
 			Scanner scr =new Scanner(System.in);
-			int input=0;
-			input=scr.nextInt();
-			System.out.println(a[i]); 
-		}
-	}
-	
-}
-
-
-class S1provisoInput extends AllLines {
-	public void S1provisoInput(String[] a) {
-		Scanner scr =new Scanner(System.in);
-		AllLines line =new AllLines();
-		while(true)
-		{
-			System.out.print(a+"\r\n"+"무엇을 조사해볼까? :");
-			String input;
-			input=scr.nextLine();
-			switch(input) {
-			case "계단": System.out.println(StairProviso.class);
-			case "형광등": System.out.println(LightProviso.class);
-			case "바닥에 떨어진 종이": System.out.println(PaperProviso.class);
-			case "빌라 바깥": System.out.println(WindowProviso.class);
-			case "계단 위쪽": System.out.println(UpstairProviso.class);
-			case "현관문": System.out.println(FrontDoorProviso.class);
-			case "도어락": System.out.println(DoorLockProviso.class);
-			if(input=="도어락") {
-				break;
-			}
-			System.out.println(line.stage1Organize);
-		}
+			scr.nextLine();
+			System.out.println("조사 결과 :" +a[i]);
 		}
 	}
 	public void S1provisoInput2(String[] a) {
