@@ -4,26 +4,7 @@ import Stage1.ChoiceObject;
 
 public class ProvisoNames extends ChoiceObject {
 	
-	public String[] stage1Proviso1 = {
-			"1. 계단\r\n",
-			"2. 형광등\r\n",
-			"3. 바닥에 떨어진 종이\r\n",
-			"4. 빌라 바깥\r\n",
-			"5. 계단 위쪽\r\n",
-			"6. 현관문\r\n",
-			"7. 도어락\r\n",		
-	};
-	public String[] stage1Proviso2 = {
-	
-			"1. 계단\r\n",
-			"2. 형광등\r\n",
-			"3. 바닥에 떨어진 종이\r\n",
-			"4. 빌라 바깥\r\n",
-			"5. 계단 위쪽\r\n",
-			"6. 현관문\r\n",
-			"7. 도어락\r\n",
-			"8. 장도리\r\n"
-	}	;	
+
 	public String[] stage2Proviso1 = {
 			"1.  신발장\r\n",
 			"2. 소파\r\n",
