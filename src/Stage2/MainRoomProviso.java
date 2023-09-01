@@ -2,7 +2,7 @@ package Stage2;
 
 import Stage1.ChoiceObject;
 
-public class MainRoomProviso extends ChoiceObject {
+public class MainRoomProviso extends ChoiceObject2 {
 	{
 		this.choicename = "안방";
 		this.choiceObjectLines = new String[] {

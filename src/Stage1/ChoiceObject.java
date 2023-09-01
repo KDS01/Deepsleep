@@ -10,8 +10,5 @@ public class ChoiceObject {
 	public boolean addProviso(String a) {
 		return chosenProviso.add(a);
 	}
-	public void ProvisoLinesOut() {
-		
-	}
 }
  

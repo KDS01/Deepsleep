@@ -1,8 +1,6 @@
 package Stage2;
 
-import Stage1.ChoiceObject;
-
-public class RefregeratorProviso extends ChoiceObject {
+public class RefregeratorProviso extends ChoiceObject2 {
 	{
 		this.choicename = "냉장고";
 		this.choiceObjectLines = new String[] {

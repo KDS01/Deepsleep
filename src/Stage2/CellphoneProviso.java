@@ -1,8 +1,7 @@
 package Stage2;
 
-import Stage1.ChoiceObject;
 
-public class CellphoneProviso extends ChoiceObject {
+public class CellphoneProviso extends ChoiceObject2 {
 	{
 		this.choicename ="휴대폰";
 		this.choiceObjectLines = new String[] {
@@ -14,6 +13,14 @@ public class CellphoneProviso extends ChoiceObject {
 				"\"이건.....\"",
 				"아래쪽에 바퀴가 달린, 작은 쥐 모양의 장난감이 구석에서 튀어나왔다 "
 		};
+		this.CombchoiceObjectLines =new String[]
+						{
+						"휴대폰에는 기본적으로 개인정보가 있는게 정상이겠지?",
+						"생각이 미치자 얼른 휴대폰을 집어들었다.",
+						"\"뭐야...? 이거 왜 이래..?\"",
+						"아까까지만 해도 잘 작동했던 휴대폰은 갑자기 먹통이라도 된 듯 아무리 눌러도 반응이 없다.",
+						"\"진짜 사람 환장하게 만드는구만....\""
+						};
 		this.addProviso("단서 : 휴대폰");
 	}
 

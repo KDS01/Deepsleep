@@ -7,7 +7,7 @@ public class Narrator {
 		{
 			Scanner scr =new Scanner(System.in);
 			scr.nextLine();
-			System.out.println("조사 결과 :" +a[i]);
+			System.out.println(a[i]);
 			System.out.println("\r\n");
 		}
 	}
@@ -29,7 +29,7 @@ public class Narrator {
 		{
 			Scanner scr =new Scanner(System.in);
 			scr.nextLine();
-			System.out.println("한수연 :" +a[i]);
+			System.out.println("한수연  :" +a[i]);
 			System.out.println("\r\n");
 		}
 	}

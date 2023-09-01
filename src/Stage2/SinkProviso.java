@@ -1,8 +1,7 @@
 package Stage2;
 
-import Stage1.ChoiceObject;
 
-public class SinkProviso extends ChoiceObject {
+public class SinkProviso extends ChoiceObject2 {
 	{
 		this.choicename = "싱크대";
 		this.choiceObjectLines =new String[] {

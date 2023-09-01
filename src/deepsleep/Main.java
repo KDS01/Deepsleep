@@ -1,9 +1,12 @@
 package deepsleep;
 import Stage1.*;
+import Stage2.*;
+
 import java.util.Scanner;
 public class Main extends Stage1Flow {
 	public static void main(String[] args) {
 		Stage1Flow s1Flow = new Stage1Flow();
+		Stage2Flow s2Flow = new Stage2Flow();
 		System.out.println("Deep Sleep....");
 		System.out.println("계속하려면 아무 키나 입력하세요.");
 		s1Flow.S1Start();
@@ -11,6 +14,15 @@ public class Main extends Stage1Flow {
 		s1Flow.S1ORG();
 		s1Flow.S1provisoInput2();
 		s1Flow.S1End();
+		s2Flow.S1Start();
+		s2Flow.S2provisoInput1();
+		s2Flow.S1provisoInput2();
+		s2Flow.S2provisoInput3();
+		s2Flow.S2ORG();
+		s2Flow.S2ProvisoCombination();
+		s2Flow.S2IdentityLines();
+		s2Flow.S2MainRoomDoor();
+		
 	}
 
 }
