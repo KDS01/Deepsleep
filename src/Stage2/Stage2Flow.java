@@ -167,10 +167,10 @@ public class Stage2Flow extends Narrator {
 				String input;
 				input=scr.nextLine();
 				switch(input) {
-				case "문을 열어본다." :
+				case "문을 열어본다" :
 					NameNarration(S2Lines.stage2DoorHandleLines);
 					break;
-				case "문을 두드린다.":
+				case "문을 두드린다":
 					NameNarration(S2Lines.stage2DoorKnockLines);
 					Pcount++;
 					break;
