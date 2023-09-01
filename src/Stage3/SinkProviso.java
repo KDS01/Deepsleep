@@ -1,5 +1,6 @@
-package Stage2;
+package Stage3;
 
+import Stage2.ChoiceObject2;
 
 public class SinkProviso extends ChoiceObject2 {
 	{
