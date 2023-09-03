@@ -1,6 +1,5 @@
 package Stage3;
 
-import Stage1.ChoiceObject;
 import Stage2.ChoiceObject2;
 
 public class MainRoomProviso extends ChoiceObject2 {

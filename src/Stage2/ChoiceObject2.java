@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class ChoiceObject2 {
 	protected String choicename;
-	protected String[] choiceObjectLines;
+	public String[] choiceObjectLines;
 	protected String[] CombchoiceObjectLines;
 	protected ArrayList<String>chosenProviso =new ArrayList<>();
 	protected ArrayList<String>decisiveProviso =new ArrayList<>();
