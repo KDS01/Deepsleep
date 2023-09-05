@@ -13,6 +13,6 @@ public class MainRoomProviso extends ChoiceObject2 {
 				"혼자 나직하게 중얼거리며 안방으로 발걸음을 옮겼다.",
 				"\'단서 : 안방\' 을 획득하셨습니다."
 				};
-		this.addProviso("단서 : 안방");
+//		this.addProviso("단서 : 안방");
 }
 }

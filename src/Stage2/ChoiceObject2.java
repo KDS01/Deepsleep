@@ -3,15 +3,30 @@ import java.util.ArrayList;
 
 public class ChoiceObject2 {
 	protected String choicename;
+	public String[] arr;
 	public String[] choiceObjectLines;
 	protected String[] CombchoiceObjectLines;
-	protected ArrayList<String>chosenProviso =new ArrayList<>();
-	protected ArrayList<String>decisiveProviso =new ArrayList<>();
-	public boolean addProviso(String a) {
-		return chosenProviso.add(a);
+	private ArrayList<String>chosenProviso=new ArrayList<String>();
+	private ArrayList<String>decisiveProviso=new ArrayList<String>();
+	public ArrayList<String> getchosenProviso() {
+		return chosenProviso;
 	}
-	public boolean adddecisiveProviso(String a) {
+	public ArrayList<String> getdecisiveProviso() {
+		return decisiveProviso;
+	}
+	public boolean setDecisiveProviso(String a) {
 		return decisiveProviso.add(a);
 	}
+	public boolean setChosenProviso(String a) {
+		return chosenProviso.add(a);
+	}
+	public void getChosenProviso() {
+		String[] arr = chosenProviso.toArray(new String[chosenProviso.size()]);
+		for(String temp : arr) {
+			System.out.println("지금까지 얻은 단서들은.... : " +temp);
+		}
+		
+	}
 }
+
  

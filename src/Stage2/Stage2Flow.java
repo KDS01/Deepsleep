@@ -1,21 +1,23 @@
 
 package Stage2;
 import java.util.Scanner;
+import java.util.ArrayList;
 import deepsleep.Narrator;
 
 public class Stage2Flow extends Narrator {
+		public ChoiceObject2 COB = new ChoiceObject2();
 		public void S1Start() {
 			Stage2Lines S2Lines = new Stage2Lines();
 			PlayerNarration(S2Lines.stage2Start);	
 		}
 		public void S2provisoInput1() {
 			Scanner scr =new Scanner(System.in);
-			ChoiceObject2 CO2 = new ChoiceObject2();
 			Stage2Lines S2Lines = new Stage2Lines();
 			int provisocount =0;
 			while(true)
 			{
 				System.out.print(S2Lines.Stage2Proviso1 + "\r\n"+"무엇을 조사해볼까? :");
+				System.out.println("모은 단서들 목록을 보려면" +" 단서"+"를 입력하세요");
 				String input;
 				input=scr.nextLine();
 				switch(input) {
@@ -33,7 +35,11 @@ public class Stage2Flow extends Narrator {
 						break;
 					case "바닥에 내던져진 에코백":
 						PlayerNarration((new AbandonEcobagProviso().choiceObjectLines));
+						COB.setChosenProviso("단서 : 에코백");
 						provisocount++;
+						break;
+					case "단서":
+						COB.getChosenProviso();
 						break;
 					default :
 						System.out.println("일단 눈에 띄는 것들에서 방법을 찾아보자.");
@@ -44,27 +50,33 @@ public class Stage2Flow extends Narrator {
 			}
 			PlayerNarration(S2Lines.stage2Ecobag);
 		}
-		public void S1provisoInput2() {
+		public void S2provisoInput2() {
 			Scanner scr =new Scanner(System.in);
-			ChoiceObject2 COB = new ChoiceObject2();
 			Stage2Lines S2Lines = new Stage2Lines();
 			int Pcount =0;
 			while(true)
 			{
 				System.out.print(S2Lines.Stage2EcobagList+ "\r\n"+"무엇을 조사해볼까? :");
+				System.out.println("모은 단서들 목록을 보려면" +" 단서"+"를 입력하세요");
 				String input;
 				input=scr.nextLine();
 				switch(input) {
 				case "휴대폰" :
 					PlayerNarration(new CellphoneProviso().choiceObjectLines);
+					COB.setChosenProviso("단서 : 휴대폰");
 					Pcount++;
 					break;
 				case "작은 봉투":
 					PlayerNarration(new SmallenvelopProviso().choiceObjectLines);
+					COB.setChosenProviso("단서 : 티오필렌나트륨");
 					break;
 				case "지갑":
 					PlayerNarration(new WalletProviso().choiceObjectLines);
+					COB.setChosenProviso("단서 : 지갑");
 					Pcount++;
+					break;
+				case "단서":
+					COB.getChosenProviso();
 					break;
 				default :
 					System.out.println("지금은 다른 것보단 저 세 가지 단서가 우선이야.");
@@ -77,12 +89,12 @@ public class Stage2Flow extends Narrator {
 		}
 		public void S2provisoInput3() {
 			Scanner scr =new Scanner(System.in);
-			ChoiceObject2 COB = new ChoiceObject2();
 			Stage2Lines S2Lines = new Stage2Lines();
 			int Pcount =0;
 			while(true)
 			{
 				System.out.print(S2Lines.Stage2EcobagList2+ "\r\n"+"무엇을 조사해볼까? :");
+				System.out.println("모은 단서들 목록을 보려면" +" 단서"+"를 입력하세요");
 				String input;
 				input=scr.nextLine();
 				switch(input) {
@@ -97,7 +109,11 @@ public class Stage2Flow extends Narrator {
 					break;
 				case "원격 조종 장난감":
 					PlayerNarration(new RemoconToyProviso().choiceObjectLines);
+					COB.setChosenProviso("단서 : 원격 조종 장난감");
 					Pcount++;
+					break;
+				case "단서":
+					COB.getChosenProviso();
 					break;
 				default :
 					System.out.println("저 장난감이 자꾸만 신경쓰이는데...");
@@ -124,6 +140,7 @@ public class Stage2Flow extends Narrator {
 			System.out.println("내가 누군지 생각나게 해 줄 단서를 입력해보자.");
 			while(true) {
 				System.out.print(S2Lines.Stage2ProvisoComb+ "\r\n"+"어떤 단서가 도움이 될까...:");
+				System.out.println("모은 단서들 목록을 보려면" +" 단서"+"를 입력하세요");
 				String input;
 				input=scr.nextLine();
 				switch(input) {
@@ -141,6 +158,9 @@ public class Stage2Flow extends Narrator {
 					PlayerNarration(new WalletProviso().CombchoiceObjectLines);
 					Pcount++;
 					break;
+				case "단서":
+					COB.getChosenProviso();
+					break;
 				default :
 					System.out.println("이건 아니야... 다시 생각해보자...");
 				}
@@ -155,6 +175,7 @@ public class Stage2Flow extends Narrator {
 			}
 		}
 		public void S2IdentityLines() {
+			COB.setDecisiveProviso("결정적인 단서 : 정체성");
 			Stage2Lines S2Lines = new Stage2Lines();
 			NameNarration(S2Lines.stage2identityLines);
 		}
@@ -164,6 +185,7 @@ public class Stage2Flow extends Narrator {
 			while(true) {
 				int Pcount=0;
 				System.out.println(S2Lines.Stage2DoorOption + "안방 문 앞에서 뭘 해볼까...");
+				System.out.println("모은 단서들 목록을 보려면" +" 단서"+"를 입력하세요");
 				String input;
 				input=scr.nextLine();
 				switch(input) {
@@ -174,15 +196,23 @@ public class Stage2Flow extends Narrator {
 					NameNarration(S2Lines.stage2DoorKnockLines);
 					Pcount++;
 					break;
+				case "단서":
+					COB.getChosenProviso();
+					break;
 				default :
 					System.out.println("지금은 어서 안방에 들어가봐야 해.");
 				}
 				if(Pcount>=1) {
 					break;
 				}
-				
 			}
 			Narration(S2Lines.stage2DoorKnockLines2);
+			COB.setDecisiveProviso("결정적인 단서 : 화재");
+			}
 		}
-}
+	
+	
+		
+		
+
 	

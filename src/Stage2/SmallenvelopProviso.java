@@ -15,6 +15,6 @@ public class SmallenvelopProviso extends ChoiceObject2 {
 				"네이밍 태그에는 \'티오펜탈나트륨\'이라고 적혀있었다.",
 				"\'단서 : 티오펜탈나트륨\'을 획득하셨습니다."
 				};
-		this.addProviso("단서 : 티오펜탈나트륨");
+//		this.addProviso("단서 : 티오펜탈나트륨");
 		}
 	}

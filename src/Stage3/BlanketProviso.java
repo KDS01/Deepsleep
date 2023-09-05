@@ -16,7 +16,7 @@ public class BlanketProviso extends ChoiceObject2 {
 				"갑자기 참을 수 없을 만큼 강한 두통이 몰려왔다.",
 				"\'단서 : 잿더미\' 을 획득하셨습니다."
 				};
-		this.addProviso("단서 :잿더미");
+//		this.addProviso("단서 :잿더미");
 	}
 
 	

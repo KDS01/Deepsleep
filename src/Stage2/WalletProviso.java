@@ -18,7 +18,7 @@ public class WalletProviso extends ChoiceObject2 {
 				"\"신분증....그래..내 이름...내 이름은.....\"",
 				"신분증에는 무표정한 내 증명사진 아래 \'한수연\'이라는 이름이 적혀있었다."
 				};
-		this.addProviso("단서 : 지갑");
+//		this.addProviso("단서 : 지갑");
 		
 	}
 

@@ -22,7 +22,6 @@ public class CellphoneProviso extends ChoiceObject2 {
 						"아까까지만 해도 잘 작동했던 휴대폰은 갑자기 먹통이라도 된 듯 아무리 눌러도 반응이 없다.",
 						"\"진짜 사람 환장하게 만드는구만....\""
 						};
-		this.addProviso("단서 : 휴대폰");
 	}
 
 }

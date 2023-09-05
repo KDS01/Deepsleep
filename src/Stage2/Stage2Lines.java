@@ -76,6 +76,7 @@ public class Stage2Lines extends Stage2Flow {
 				"안방 문 앞에 다다르자,",
 				"\" 닫혀있네...\"",
 				"오늘따라 유독 닫힌 문을 많이 보는 것 같다....",
+				"\'[결정적인 단서] : 정체성\'을 획득하셨습니다",
 				"...\r\n"
 		};
 	public String[] stage2DoorHandleLines =
@@ -107,6 +108,7 @@ public class Stage2Lines extends Stage2Flow {
 			"귀가 먹먹해질 정도의 폭음이 일어나며 온 집안이 불에 휩싸였다",
 			"....\r\n",
 			".........\r\n",
+			"\'[결정적인 단서] : 화재\'를 획득하셨습니다",
 			"======================[Stage2] CLEAR======================"
 };
 	public String Stage2Proviso1 = 

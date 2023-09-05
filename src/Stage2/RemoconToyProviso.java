@@ -21,7 +21,5 @@ public class RemoconToyProviso extends ChoiceObject2 {
 				"마치 먹구름속에 전구가 켜지듯 번쩍 생각이 떠올랐다",
 				"\"마루.... 그래..우리 마루...\""
 				};
-		this.addProviso("단서 : 원격 조종 장난감");
-
 }
 }

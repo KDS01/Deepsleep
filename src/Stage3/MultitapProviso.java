@@ -10,7 +10,7 @@ public class MultitapProviso extends ChoiceObject2 {
 				"이건 완전 문어발이 따로 없네..",
 				"\"단서 : 문어발\"을 획득하셨습니다."
 				};
-		this.addProviso("단서 : 문어발");
+//		this.addProviso("단서 : 문어발");
 	}
 
 }

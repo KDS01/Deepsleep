@@ -11,7 +11,6 @@ public class AbandonEcobagProviso extends ChoiceObject2 {
 				"내용물을 다 쏟아내서 비어버린 에코백",
 				"\"이건 이젠 별로  쓸모가 없겠는걸...\""
 				};
-		this.addProviso("단서 : 에코백");
 	}
 
 }
