@@ -32,7 +32,8 @@ public class Main extends Stage1Flow {
 		s3Flow.S3ORG();
 		s3Flow.S3provisoInput4(s2Flow);
 		s4Flow.S4start(s2Flow);
-		
+		s4Flow.S4Input(s2Flow);
+		s4Flow.isTrueEnding(s2Flow);
 	}
 
 }

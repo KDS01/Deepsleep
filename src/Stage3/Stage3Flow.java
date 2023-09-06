@@ -19,6 +19,7 @@ public class Stage3Flow extends Narrator {
 			while(true) {
 				int Pcount=0;
 				System.out.print("\r\n"+S3Lines.Stage3FirstChoice +"\r\n"+ "지금 내가 해야 할 일은...");
+				System.out.println("모은 단서들 목록을 보려면" +" 단서"+"를 입력하세요");
 				String input;
 				input=scr.nextLine();
 				switch(input) {
@@ -51,6 +52,7 @@ public class Stage3Flow extends Narrator {
 			while(true)
 			{
 				System.out.print(S3Lines.Stage3Proviso1 + "\r\n"+"무엇을 조사해볼까? :");
+				System.out.println("모은 단서들 목록을 보려면" +" 단서"+"를 입력하세요");
 				String input;
 				input=scr.nextLine();
 				switch(input) {
@@ -93,6 +95,7 @@ public class Stage3Flow extends Narrator {
 			while(true)
 			{
 				System.out.print(S3Lines.stage3Proviso2+ "\r\n"+"무엇을 조사해볼까? :");
+				System.out.println("모은 단서들 목록을 보려면" +" 단서"+"를 입력하세요");
 				String input;
 				input=scr.nextLine();
 				switch(input) {
@@ -144,6 +147,7 @@ public class Stage3Flow extends Narrator {
 			while(true)
 			{
 				System.out.print("\r\n" + S3Lines.stage3Proviso2 + "마루는 어디에 있을까..? :");
+				System.out.println("모은 단서들 목록을 보려면" +" 단서"+"를 입력하세요");
 				String input;
 				input=scr.nextLine();
 				switch(input) {

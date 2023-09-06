@@ -23,9 +23,8 @@ public class ChoiceObject2 {
 	public void getChosenProviso() {
 		String[] arr = chosenProviso.toArray(new String[chosenProviso.size()]);
 		for(String temp : arr) {
-			System.out.println("지금까지 얻은 단서들은.... : " +temp);
+			System.out.println(temp);
 		}
-		
 	}
 }
 
