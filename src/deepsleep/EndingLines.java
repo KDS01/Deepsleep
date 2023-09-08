@@ -1,10 +1,19 @@
 package deepsleep;
 
 public class EndingLines {
-	public void badEnding()
-	{
-		
-	}
+	public String[] badEnding = new String[]
+			{
+				"오늘이 무척이나 피곤한 날인 건 맞지만,",
+				"\"그렇다고 쳐도 너무 심하게 졸린걸...\"",
+				"뻑뻑해진 눈을 비비며 한 걸음 내딛었다",
+				"\"어....?\"",
+				"기우뚱 하며 세상이 반정도 돌았다.",
+				"아니, 이건 세상이 돈게 아니라...",
+				"\"내가 쓰러진거구나...\"",
+				"아무래도 좋아.. 그냥 이대로 잠들고 싶다...",
+				"생각이 들자마자 온 세상이 스위치를 내린 듯 깜깜하게 물들었다.",
+				"[Bad Ending] 이제 그만."
+			};
 	public String[] NorMalEnding1 = new String[] { 
 			"화르르르륵!",
 			"\"히익!!\"",

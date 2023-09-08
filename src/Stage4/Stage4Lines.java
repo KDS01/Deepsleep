@@ -46,13 +46,13 @@ public class Stage4Lines {
 				"그곳에는 내가 평생 보지도 못한 금액이 손해배상금으로 적혀 있었다.",
 				"...\r\n"
 		};
-	public String Stage3Proviso1 = 
-			"1. 화장실\r\n"
-			+"2. 현관문\r\n"
-			+"3. 싱크대\r\n"
-			+"4. 불길\r\n"
-			+"5. 안방\r\n"
-	;
+	public String[] Stage4Identity = {
+			"나는..",
+			"내 이름은 한수연..",
+			"그저 평범한.. 26세 소시민이다.",
+			"이제 다 기었났지만...",
+			"\"이게.. 내 자살의 이유가 되지는 않아...\""
+	};
 	public String Stage3EcobagList = 
 			"1. 지갑\r\n"
 			+"2. 휴대폰\r\n"
