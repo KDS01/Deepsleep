@@ -54,6 +54,7 @@ public class Stage2Flow extends Narrator {
 			Scanner scr =new Scanner(System.in);
 			Stage2Lines S2Lines = new Stage2Lines();
 			int Pcount =0;
+			int Pcount2 = 0;
 			while(true)
 			{
 				System.out.print(S2Lines.Stage2EcobagList+ "\r\n"+"무엇을 조사해볼까? :");
@@ -73,7 +74,7 @@ public class Stage2Flow extends Narrator {
 				case "지갑":
 					PlayerNarration(new WalletProviso().choiceObjectLines);
 					COB.setChosenProviso("단서 : 지갑");
-					Pcount++;
+					Pcount2++;
 					break;
 				case "단서":
 					COB.getChosenProviso();
@@ -81,7 +82,7 @@ public class Stage2Flow extends Narrator {
 				default :
 					System.out.println("지금은 다른 것보단 저 세 가지 단서가 우선이야.");
 				}
-				if(Pcount>=2)
+				if(Pcount>=1&&Pcount2>=1)
 				{
 					break;
 				}
@@ -136,6 +137,7 @@ public class Stage2Flow extends Narrator {
 			Scanner scr =new Scanner(System.in);
 			Stage2Lines S2Lines = new Stage2Lines();
 			int Pcount=0;
+			int Pcount2=0;
 			PlayerNarration(S2Lines.stage2CombinationLines);
 			System.out.println("내가 누군지 생각나게 해 줄 단서를 입력해보자.");
 			while(true) {
@@ -156,7 +158,7 @@ public class Stage2Flow extends Narrator {
 					break;
 				case "지갑" :
 					PlayerNarration(new WalletProviso().CombchoiceObjectLines);
-					Pcount++;
+					Pcount2++;
 					break;
 				case "단서":
 					COB.getChosenProviso();
@@ -164,11 +166,11 @@ public class Stage2Flow extends Narrator {
 				default :
 					System.out.println("이건 아니야... 다시 생각해보자...");
 				}
-				if(Pcount==1)
+				if(Pcount==1||Pcount2==1)
 				{
 					System.out.println("한 가지 정보로는 조금 부족한 느낌이 들어.. 조금만 더 생각해보자..");
 				}
-				if(Pcount>=2)
+				if(Pcount>=1&&Pcount2>=1)
 				{
 					break;
 				}

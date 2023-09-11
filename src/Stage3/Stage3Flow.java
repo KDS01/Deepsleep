@@ -91,6 +91,7 @@ public class Stage3Flow extends Narrator {
 			Scanner scr =new Scanner(System.in);
 			Stage3Lines S3Lines = new Stage3Lines();
 			int Pcount =0;
+			int Pcount2=0;
 			NameNarration(S3Lines.stage3MainRoomLines);
 			while(true)
 			{
@@ -113,7 +114,7 @@ public class Stage3Flow extends Narrator {
 				case "이불":
 					NameNarration(new BlanketProviso().choiceObjectLines);
 					COB.setChosenProviso("단서 : 이불");
-					Pcount++;
+					Pcount2++;
 					break;
 				case "단서":
 					COB.getChosenProviso();
@@ -121,11 +122,11 @@ public class Stage3Flow extends Narrator {
 				default :
 					System.out.println("마루를 찾는 것이 먼저다.");
 				}
-				if(Pcount==1)
+				if(Pcount==1||Pcount2==1)
 				{
 					System.out.println("아직 조금 부족한 느낌이 들어. 조금 더 샅샅히 찾아보자.");
 				}
-				if(Pcount>=2)
+				if(Pcount>=1&&Pcount2>=1)
 				{
 					break;
 				}
@@ -143,7 +144,8 @@ public class Stage3Flow extends Narrator {
 			ChoiceObject2 COB = A.COB;
 			Scanner scr =new Scanner(System.in);
 			Stage3Lines S3Lines = new Stage3Lines();
-			int Pcount =0;			
+			int Pcount =0;
+			int Pcount2=0;
 			while(true)
 			{
 				System.out.print("\r\n" + S3Lines.stage3Proviso2 + "마루는 어디에 있을까..? :");
@@ -163,7 +165,7 @@ public class Stage3Flow extends Narrator {
 					break;
 				case "멀티탭":
 					NameNarration(new MultitapProviso().CombchoiceObjectLines);
-					Pcount++;
+					Pcount2++;
 					break;
 				case "단서":
 					COB.getChosenProviso();
@@ -171,11 +173,11 @@ public class Stage3Flow extends Narrator {
 				default :
 					System.out.println("이건 아니야.... 다시 생각해보자..");
 				}
-				if(Pcount==1)
+				if(Pcount==1||Pcount2==1)
 				{
 					System.out.println("한 가지 단서로 유추하기에는 조금 어려운데.. 다른 단서에서 얻을 수 있을 만한 정보는 없을까?");
 				}
-				if(Pcount>=2)
+				if(Pcount>=1&&Pcount2>=1)
 				{
 					break;
 				}

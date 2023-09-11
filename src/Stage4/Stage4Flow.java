@@ -73,7 +73,7 @@ public class Stage4Flow extends Narrator {
 					}
 				}
 			}
-				if(input.equals("화재")) 
+				else if(input.equals("화재")) 
 				{
 					String input2;
 					for(int i=0; i<arr.length; i++) 
