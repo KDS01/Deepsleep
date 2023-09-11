@@ -18,6 +18,9 @@ public class ChoiceObject2 {
 		return decisiveProviso.add(a);
 	}
 	public boolean setChosenProviso(String a) {
+		ArrayList<String> temp = new ArrayList<String>();
+		temp.add(a);
+		chosenProviso.removeAll(temp);
 		return chosenProviso.add(a);
 	}
 	public void getChosenProviso() {

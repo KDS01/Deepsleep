@@ -122,13 +122,13 @@ public class Stage3Flow extends Narrator {
 				default :
 					System.out.println("마루를 찾는 것이 먼저다.");
 				}
-				if(Pcount==1||Pcount2==1)
-				{
-					System.out.println("아직 조금 부족한 느낌이 들어. 조금 더 샅샅히 찾아보자.");
-				}
 				if(Pcount>=1&&Pcount2>=1)
 				{
 					break;
+				}
+				else if(Pcount==1||Pcount2==1)
+				{
+					System.out.println("아직 조금 부족한 느낌이 들어. 조금 더 샅샅히 찾아보자.");
 				}
 			}
 		}
@@ -173,13 +173,13 @@ public class Stage3Flow extends Narrator {
 				default :
 					System.out.println("이건 아니야.... 다시 생각해보자..");
 				}
-				if(Pcount==1||Pcount2==1)
-				{
-					System.out.println("한 가지 단서로 유추하기에는 조금 어려운데.. 다른 단서에서 얻을 수 있을 만한 정보는 없을까?");
-				}
 				if(Pcount>=1&&Pcount2>=1)
 				{
 					break;
+				}
+				else if(Pcount==1||Pcount2==1)
+				{
+					System.out.println("아직 조금 부족한 느낌이 들어. 조금 더 샅샅히 찾아보자.");
 				}
 			}
 			NameNarration(S3Lines.stage3identityLines);

@@ -166,13 +166,13 @@ public class Stage2Flow extends Narrator {
 				default :
 					System.out.println("이건 아니야... 다시 생각해보자...");
 				}
-				if(Pcount==1||Pcount2==1)
-				{
-					System.out.println("한 가지 정보로는 조금 부족한 느낌이 들어.. 조금만 더 생각해보자..");
-				}
 				if(Pcount>=1&&Pcount2>=1)
 				{
 					break;
+				}
+				else if(Pcount==1||Pcount2==1)
+				{
+					System.out.println("아직 조금 부족한 느낌이 들어. 조금 더 샅샅히 찾아보자.");
 				}
 			}
 		}
