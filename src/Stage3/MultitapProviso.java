@@ -11,6 +11,11 @@ public class MultitapProviso extends ChoiceObject2 {
 				"\"단서 : 문어발\"을 획득하셨습니다."
 				};
 //		this.addProviso("단서 : 문어발");
+		this.CombchoiceObjectLines = new String[] {
+				"하나의 멀티탭에 난잡하게 꽂혀있는 여러개의 멀티탭.",
+				"거기에다가 새까맣게 이어져있는 불 탄 자국들은....",
+				"여기서부터 무슨 일이 벌어졌다는 걸 암시하는 듯 했다."
+		};
 	}
 
 }

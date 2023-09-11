@@ -17,6 +17,13 @@ public class BlanketProviso extends ChoiceObject2 {
 				"\'단서 : 잿더미\' 을 획득하셨습니다."
 				};
 //		this.addProviso("단서 :잿더미");
+		this.CombchoiceObjectLines= new String[] {
+				"이불 안에 곱게 모여있는 잿더미.",
+				"마치 무언가가 웅크리고 있는 듯한 형태는..",
+				"내가 잘 아는 모양과 너무나도 흡사했다",
+				"상상하기조차 싫을 정도로",
+				"......."
+		};
 	}
 
 	

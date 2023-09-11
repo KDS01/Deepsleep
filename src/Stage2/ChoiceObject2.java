@@ -5,7 +5,7 @@ public class ChoiceObject2 {
 	protected String choicename;
 	public String[] arr;
 	public String[] choiceObjectLines;
-	protected String[] CombchoiceObjectLines;
+	public String[] CombchoiceObjectLines;
 	private ArrayList<String>chosenProviso=new ArrayList<String>();
 	private ArrayList<String>decisiveProviso=new ArrayList<String>();
 	public ArrayList<String> getchosenProviso() {

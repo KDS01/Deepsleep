@@ -28,7 +28,7 @@ public class Stage3Flow extends Narrator {
 					Pcount++;
 					break;
 				case "탈출한다":
-					NameNarration(Ed.NorMalEnding1);
+					Narration(Ed.NorMalEnding1);
 					System.exit(0);
 					break;
 				case "단서":
@@ -158,9 +158,11 @@ public class Stage3Flow extends Narrator {
 					System.out.println("이건 아니야.... 다시 생각해보자..");
 					break;
 				case "이불":
+					NameNarration(new BlanketProviso().CombchoiceObjectLines);
 					Pcount++;
 					break;
 				case "멀티탭":
+					NameNarration(new MultitapProviso().CombchoiceObjectLines);
 					Pcount++;
 					break;
 				case "단서":
