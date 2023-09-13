@@ -126,8 +126,8 @@ public class Stage2Lines extends Stage2Flow {
 	public String Stage2EcobagList2 = 
 			"1. 지갑\r\n"
 			+"2. 휴대폰\r\n"
-			+"3. 작은 봉투\r\n"
-			+"4. 원격 조종 장난감\r\n"
+			+"3. 원격 조종 장난감\r\n"
+			+"4. 작은 봉투\r\n"
 	;
 	public String Stage2DoorOption = 
 			"1. 문을 열어본다\r\n"
