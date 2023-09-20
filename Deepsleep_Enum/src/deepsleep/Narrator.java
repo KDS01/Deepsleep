@@ -1,16 +1,18 @@
 package deepsleep;
 import java.util.Scanner;
+import deepsleep.EndingLines;
 import deepsleep.STAGE;
 import deepsleep.STAGESTATUS;
 import deepsleep.SUBSTATUS;
 public class Narrator {
-	private static long timeout = 300000;
-	public void TimeOutSet(long temp) {
-		this.timeout=temp;
-	}
 	private static long starttime = System.currentTimeMillis();
-		// TODO Auto-generated constructor stub
-	
+	private static long endtime = starttime+ 300000;
+	public void setEndtime(long temp) {
+		this.endtime=temp;
+	}
+	public long getTime() {
+		return starttime;
+	}
 //	private STAGE st;
 //	private STAGESTATUS stt;
 //	private SUBSTATUS sub;
@@ -39,36 +41,54 @@ public class Narrator {
 //		return sub;
 //	}
 //		
-public void TimeoutNarrator() {
-	
-}
 public void Narration(String[] a) {
+		EndingLines ed = new EndingLines();
 			for(int i=0; i<a.length; i++) {
-				
+				long timecheck = System.currentTimeMillis();
+				if(timecheck>=endtime) {
+					Narration(ed.badEnding);
+					System.exit(0);
+				}
+				else {
 				Scanner scr =new Scanner(System.in);
 				scr.nextLine();
 				System.out.println(a[i]);
 				System.out.println("\r\n");
-		}
-	}
+					 }
+				}
 
-	public void PlayerNarration(String[] a) {
-		for(int i=0; i<a.length; i++) {
-			Scanner scr =new Scanner(System.in);
-			scr.nextLine();
-			System.out.println("???    :  " +a[i]);
-			System.out.println("\r\n");
 		}
-	}
-	public void NameNarration(String[] a)
-	{
-		
-		for(int i=0; i<a.length; i++) 
-		{
+	public void PlayerNarration(String[] a) {
+		EndingLines ed = new EndingLines();
+			for(int i=0; i<a.length; i++) {
+				long timecheck = System.currentTimeMillis();
+				if(timecheck>=endtime) {
+					Narration(ed.badEnding);
+					System.exit(0);
+				}
+				else {
+					Scanner scr =new Scanner(System.in);
+					scr.nextLine();
+					System.out.println("???    :  " +a[i]);
+					System.out.println("\r\n");
+				}
+			}
+
+		}
+	public void NameNarration(String[] a) {
+		EndingLines ed = new EndingLines();
+		for(int i=0; i<a.length; i++) {
+			long timecheck = System.currentTimeMillis();
+			if(timecheck>=endtime) {
+				Narration(ed.badEnding);
+				System.exit(0);
+			}
+			else {
 			Scanner scr =new Scanner(System.in);
 			scr.nextLine();
 			System.out.println("한수연  : " +a[i]);
 			System.out.println("\r\n");
+			}
 		}
 	}
 }
