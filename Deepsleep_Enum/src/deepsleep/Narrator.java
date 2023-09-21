@@ -6,7 +6,7 @@ import deepsleep.STAGESTATUS;
 import deepsleep.SUBSTATUS;
 public class Narrator {
 	private static long starttime = System.currentTimeMillis();
-	private static long endtime = starttime+ 300000;
+	private static long endtime = starttime+ 5000;
 	public void setEndtime(long temp) {
 		this.endtime=temp;
 	}
@@ -40,7 +40,15 @@ public class Narrator {
 //	public SUBSTATUS getsub() {
 //		return sub;
 //	}
-//		
+//	
+	public void noTimeOutNarration(String[] a) {
+			for(int i=0; i<a.length; i++) {
+				Scanner scr =new Scanner(System.in);
+				scr.nextLine();
+				System.out.println(a[i]);
+				System.out.println("\r\n");
+					 }
+				}
 public void Narration(String[] a) {
 		EndingLines ed = new EndingLines();
 			for(int i=0; i<a.length; i++) {

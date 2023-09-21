@@ -18,9 +18,6 @@ public class Stage3Flow {
 		StageMaker s3maker = new StageMaker(s3, s3stt, s3sub);
 		ChoiceObject2 COB = A.COB;
 		Narrator nar = new Narrator();
-		
-		
-		
 		public void s3Flows() {
 			s3maker.setStage(s3);
 			S3Start();

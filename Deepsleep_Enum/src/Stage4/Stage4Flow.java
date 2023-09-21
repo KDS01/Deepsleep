@@ -14,12 +14,12 @@ public class Stage4Flow extends Narrator {
 	STAGE s4;
 	STAGESTATUS s4stt;
 	SUBSTATUS s4sub;
-	StageMaker s4maker = new StageMaker(STAGE.STAGE4,s4stt,s4sub);
+	StageMaker s4maker = new StageMaker(s4,s4stt,s4sub);
 	EndingLines edline = new EndingLines();	
 	Stage2Flow A;
 	ChoiceObject2 COB = A.COB;
 	public void S4Flow() {
-		s4maker.setStage(STAGE.STAGE4);
+		s4maker.setStage(s4);
 		S4start();
 		S4Input();
 		isTrueEnding();

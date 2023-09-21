@@ -1,6 +1,6 @@
 package Stage1;
 
-public class Stage1Lines extends Stage1Flow {
+public class Stage1Lines{
 	public String[] orgbase = 
 		{	"=============================================================================",
 			"==================================생각 정리====================================",
