@@ -14,34 +14,30 @@ public class Stage3Flow {
 		STAGE s3;
 		STAGESTATUS s3stt;
 		SUBSTATUS s3sub;
-		Stage2Flow A;
 		StageMaker s3maker = new StageMaker(s3, s3stt, s3sub);
-		ChoiceObject2 COB = A.COB;
 		Narrator nar = new Narrator();
-		public void s3Flows() {
+		Scanner scr =new Scanner(System.in);
+		public void s3Flows(Stage2Flow A) {
 			s3maker.setStage(s3);
 			S3Start();
-			S3FirstChoice();
-			S3provisoInput2();
-			S3provisoInput3();
+			S3FirstChoice(A);
+			S3provisoInput2(A);
+			S3provisoInput3(A);
 			S3ORG();
-			S3End();
+			S3End(A);
 		}
-		
-		
 		public void S3Start() {
 			s3maker.setStatus(STAGESTATUS.START);
-			Stage3Lines S2Lines = new Stage3Lines();
-			nar.NameNarration(S2Lines.stage3Start);	
+			Stage3Lines S3Lines = new Stage3Lines();
+			nar.NameNarration(S3Lines.stage3Start);	
 		}
 		
-		
-		public void S3FirstChoice() {
-			s3maker.setStatus(STAGESTATUS.FIRST);
-			s3maker.setSub(SUBSTATUS.INPUT);
-			Scanner scr =new Scanner(System.in);
+		public void S3FirstChoice(Stage2Flow A) {
+			ChoiceObject2 COB = A.COB;
 			Stage3Lines S3Lines = new Stage3Lines();
 			EndingLines Ed = new EndingLines();
+			s3maker.setStatus(STAGESTATUS.FIRST);
+			s3maker.setSub(SUBSTATUS.INPUT);
 			while(true) {
 				int Pcount=0;
 				System.out.print("\r\n"+S3Lines.Stage3FirstChoice +"\r\n"+ "지금 내가 해야 할 일은...");
@@ -71,10 +67,10 @@ public class Stage3Flow {
 		}
 		
 		
-		public void S3provisoInput2() {
+		public void S3provisoInput2(Stage2Flow A) {
+			ChoiceObject2 COB = A.COB;
 			s3maker.setStatus(STAGESTATUS.SECOND);
 			s3maker.setSub(SUBSTATUS.INPUT);
-			Scanner scr =new Scanner(System.in);
 			Stage3Lines S3Lines = new Stage3Lines();
 			int provisocount =0;
 			while(true)
@@ -114,10 +110,10 @@ public class Stage3Flow {
 			nar.NameNarration(S3Lines.stage3MainroomChoice);
 		}
 		
-		public void S3provisoInput3() {
+		public void S3provisoInput3(Stage2Flow A) {
+			ChoiceObject2 COB = A.COB;
 			s3maker.setStatus(STAGESTATUS.THIRD);
 			s3maker.setSub(SUBSTATUS.INPUT);
-			Scanner scr =new Scanner(System.in);
 			Stage3Lines S3Lines = new Stage3Lines();
 			int Pcount =0;
 			int Pcount2=0;
@@ -175,9 +171,9 @@ public class Stage3Flow {
 		}
 		
 		
-		public void S3End() {
+		public void S3End(Stage2Flow A) {
 			s3maker.setStatus(STAGESTATUS.END);
-			Scanner scr =new Scanner(System.in);
+			ChoiceObject2 COB = A.COB;
 			Stage3Lines S3Lines = new Stage3Lines();
 			int Pcount =0;
 			int Pcount2=0;

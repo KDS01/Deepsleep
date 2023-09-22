@@ -12,28 +12,10 @@ public class Main extends Stage1Flow {
 		Stage4Flow s4Flow = new Stage4Flow();
 		System.out.println("Deep Sleep....");
 		System.out.println("계속하려면 아무 키나 입력하세요.");
-		s1Flow.S1Start();
-		s1Flow.S1provisoInput1();
-		s1Flow.S1ORG();
-		s1Flow.S1provisoInput2();
-		s1Flow.S1End();
-		s2Flow.S1Start();
-		s2Flow.S2provisoInput1();
-		s2Flow.S2provisoInput2();
-		s2Flow.S2provisoInput3();
-		s2Flow.S2ORG();
-		s2Flow.S2ProvisoCombination();
-		s2Flow.S2IdentityLines();
-		s2Flow.S2END();
-		s3Flow.S3Start();
-		s3Flow.S3FirstChoice();
-		s3Flow.S3provisoInput2();
-		s3Flow.S3provisoInput3();
-		s3Flow.S3ORG();
-		s3Flow.S3End();
-		s4Flow.S4start();
-		s4Flow.S4Input();
-		s4Flow.isTrueEnding();
+		s1Flow.s1flows();
+		s2Flow.s2Flows();
+		s3Flow.s3Flows(s2Flow);
+		s4Flow.S4Flow(s2Flow);
 	}
 
 }

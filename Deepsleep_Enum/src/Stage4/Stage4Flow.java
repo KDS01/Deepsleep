@@ -16,20 +16,20 @@ public class Stage4Flow extends Narrator {
 	SUBSTATUS s4sub;
 	StageMaker s4maker = new StageMaker(s4,s4stt,s4sub);
 	EndingLines edline = new EndingLines();	
-	Stage2Flow A;
-	ChoiceObject2 COB = A.COB;
-	public void S4Flow() {
+	public void S4Flow(Stage2Flow A) {
 		s4maker.setStage(s4);
-		S4start();
-		S4Input();
-		isTrueEnding();
+		S4start(A);
+		S4Input(A);
+		isTrueEnding(A);
 	}
-	public void S4start()  {
+	public void S4start(Stage2Flow A)  {
+		ChoiceObject2 COB = A.COB;
 		s4maker.setStatus(STAGESTATUS.START);
 		Stage4Lines S4Lines = new Stage4Lines();
 		NameNarration(S4Lines.stage4Start);
 		}
-	public void S4Input() {
+	public void S4Input(Stage2Flow A) {
+		ChoiceObject2 COB = A.COB;
 		s4maker.setStatus(STAGESTATUS.FIRST);
 		s4maker.setSub(SUBSTATUS.INPUT);
 		int in =0;
@@ -124,7 +124,8 @@ public class Stage4Flow extends Narrator {
 		}
 	}
 
-		public void isTrueEnding() {
+		public void isTrueEnding(Stage2Flow A) {
+			ChoiceObject2 COB = A.COB;
 			s4maker.setStatus(STAGESTATUS.END);
 			if (COB.getchosenProviso().contains("단서 : 티오필렌나트륨"))
 				Narration(edline.trueEnding);

@@ -6,7 +6,7 @@ import deepsleep.STAGESTATUS;
 import deepsleep.SUBSTATUS;
 public class Narrator {
 	private static long starttime = System.currentTimeMillis();
-	private static long endtime = starttime+ 5000;
+	private static long endtime = starttime+ 300000;
 	public void setEndtime(long temp) {
 		this.endtime=temp;
 	}
@@ -50,11 +50,11 @@ public class Narrator {
 					 }
 				}
 public void Narration(String[] a) {
-		EndingLines ed = new EndingLines();
+			EndingLines ed=new EndingLines();
 			for(int i=0; i<a.length; i++) {
 				long timecheck = System.currentTimeMillis();
 				if(timecheck>=endtime) {
-					Narration(ed.badEnding);
+					noTimeOutNarration(ed.badEnding);
 					System.exit(0);
 				}
 				else {
@@ -67,11 +67,11 @@ public void Narration(String[] a) {
 
 		}
 	public void PlayerNarration(String[] a) {
-		EndingLines ed = new EndingLines();
+		EndingLines ed=new EndingLines();
 			for(int i=0; i<a.length; i++) {
 				long timecheck = System.currentTimeMillis();
 				if(timecheck>=endtime) {
-					Narration(ed.badEnding);
+					noTimeOutNarration(ed.badEnding);
 					System.exit(0);
 				}
 				else {
@@ -84,11 +84,11 @@ public void Narration(String[] a) {
 
 		}
 	public void NameNarration(String[] a) {
-		EndingLines ed = new EndingLines();
+		EndingLines ed=new EndingLines();
 		for(int i=0; i<a.length; i++) {
 			long timecheck = System.currentTimeMillis();
 			if(timecheck>=endtime) {
-				Narration(ed.badEnding);
+				noTimeOutNarration(ed.badEnding);
 				System.exit(0);
 			}
 			else {
