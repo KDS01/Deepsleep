@@ -1,4 +1,5 @@
 //import {provisos} from "/Deep_sleep1/deep_sleep/modal/modal.js"
+let proviso_count=0;
 let doorlockLines=[
 				"\"혹시 배터리가 다 닳아서 안되는걸까?\"",
 				"그럼 배터리만 가지고 있으면  간단히 해결할 수 있지 않은가?",
@@ -17,7 +18,9 @@ let upstairLines=[
 let downStairLines=[
 				"내가 올라온 계단이다.",
 				"딱히 특별한 점은 보이지 않는다."
-				]								
+				]	
+				
+											
 let narratorObj = {
 	narratorElem: document.getElementById('linebox'),
    narratorLines: [],
@@ -26,11 +29,8 @@ let narratorObj = {
    getLine: function() {
       if (this.count < this.narratorLines.length)
          narratorElem.innerHTML = this.narratorLines[this.count++];
-      else {
-		  window.location.href="../stage1/stage1-1.jsp"
-		  }
+			}
       }
-	 }
    
 function toS1org(){
 	window.location.href("/Deep_sleep1/deep_sleep/stage1/stage1org.jsp")
@@ -43,6 +43,7 @@ document.getElementById('doorlock').onclick = function() {
 	narratorObj.count=0;
 	if(!provisos.includes("도어락")){
 		provisos.push("도어락");
+		proviso_count++;
 	}
 }
 document.getElementById('frontdoor').onclick = function() {
@@ -52,6 +53,7 @@ document.getElementById('frontdoor').onclick = function() {
 	narratorObj.count=0;
 		if(!provisos.includes("현관문")){
 		provisos.push("현관문");
+		proviso_count++;
 		}
 }
 document.getElementById('upstair').onclick = function() {
@@ -61,6 +63,7 @@ document.getElementById('upstair').onclick = function() {
 	narratorObj.count=0;
 	if(!provisos.includes("윗계단")){
 		provisos.push("윗계단");
+		proviso_count++;
 	}
 }
 document.getElementById('downstair').onclick = function() {
@@ -70,16 +73,15 @@ document.getElementById('downstair').onclick = function() {
 	narratorObj.count=0;
 	if(!provisos.includes("아랫계단")){
 		provisos.push("아랫계단");
+		proviso_count++;
 		console.log(provisos)
 	}
 }
-
-if(provisos.includes("도어락")&&
-	provisos.includes("현관문")&&
-	provisos.includes("아랫계단")&&
-	provisos.includes("윗계단"))
-	{
-		window.onload(toS1org());
+document.getElementById('linebox').onclick=function(){
+	if(proviso_count>=4){
+		window.location.href="/Deep_sleep1/deep_sleep/stage1/stage1org.jsp"
 	}
+}
+
 
 narratorObj.getLine = narratorObj.getLine.bind(narratorObj);

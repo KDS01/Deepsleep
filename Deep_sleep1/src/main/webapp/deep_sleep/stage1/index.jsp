@@ -88,7 +88,7 @@
 <body style="background-color: black;">
 	
     <div class="namebox"style="z-index: 2;">
-        이름박스
+        ???
     </div>
     <div class="linesbox" id="linebox" style="z-index: 1;" >
     	진행하려면 여기를 클릭하세요

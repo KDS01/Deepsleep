@@ -104,6 +104,17 @@
             height: 350px;
             width: 150px;
         }
+        .mainRoomimg{
+        	display:none;
+        	background-image:url('/Deep_sleep1/deep_sleep/images/Stage2-2Door.png');
+        	background-repeat:no-repeat;
+        	background-size:contain;
+        	position: absolute;
+        	right:15%;
+        	top:40%%;
+        	height:930px;
+        	width:1000px;
+        }
         .sink{
             cursor:pointer;
             position: absolute;
@@ -132,9 +143,9 @@
          padding: 15%;
         }
         .modal-content {
-            position: absolute;
-            top: 0;
-            left: 20%;
+         position: absolute;
+         top: 0;
+         left: 20%;
          background-color: rgba(0, 0, 0, 1);
          background-color: #fefefe;
          margin: 15% auto;
@@ -174,11 +185,11 @@
 </head>
 <body style="background-color:  black;">
     <div class="namebox"style="z-index: 2;">
-        이름박스
+        ???
     </div>
-    <button type="button" class="linesbox z-index: 1;">
-        대사 배열 하나씩 띄우기<br>
-    </button>
+    <div class="linesbox" id="linebox" style= z-index:1;>
+        진행하려면 여기를 클릭하세요<br>
+    </div>
     <ul class="menubox">
         <li>
           <a href="#">메뉴</a>
@@ -188,11 +199,11 @@
           </ul>
         </li>
     </ul>
-
-    <div class="ref" id=ref></div>
+	<div class="mainRoomimg" id='img'></div>
+    <div class="ref" id='ref'></div>
     <div class="sofa" id="sofa"></div>
     <div class="mainRoomDoor" id="mainroomdoor"></div>
-    <div class="table" id="table"></div>
+    <div class="sink" id="table"></div>
 
     <form action="/Deep_sleep1/deep_sleep/stage3/index.jsp">
         <button class="temp">임시버튼</button>
@@ -211,7 +222,8 @@
             <button id="close-modal2">돌아가기</button>
         </div>
     </div>
-    <script src="/Deep_sleep1/deep_sleep/scripts/stage2/s2_intro.js"></script>
+    <script src="/Deep_sleep1/deep_sleep/modal/modal.js"></script>
+    <script src="/Deep_sleep1/deep_sleep/scripts/stage2/s2_1.js"></script>
 
 </body>
 </html>

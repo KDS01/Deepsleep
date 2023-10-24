@@ -1,4 +1,6 @@
+
 let provisos = [];
+
 const modal = document.getElementById("modal");
 const openModalBtn = document.getElementById("open-modal");
 const closeModalBtn = document.getElementById("close-modal");
@@ -8,6 +10,7 @@ const closeModalBtn2 = document.getElementById("close-modal2");
 openModalBtn.onclick = (e) => {
   e.stopPropagation();
   modal.style.display = "block";
+  document.getElementById('proviso_list').innerHTML=provisos
   document.body.style.overflow = "hidden";
 };
 closeModalBtn.onclick=() => {
@@ -23,4 +26,5 @@ openModalBtn2.onclick = (e) => {
     modal2.style.display = "none";
     document.body.style.overflow = "auto";
   };
-document.getElementById('proviso_list').innerHTML=provisos;
+
+	

@@ -1,3 +1,5 @@
+const elem=document.getElementById('img');
+let linescount=0;
 let RefregeratorLines=[
 				"30년은 족히 된 것 같은 육중한 냉장고다.",
 				"내 형편에 양문형 냉장고는 꿈도 꿀 수 없겠지.",
@@ -69,6 +71,19 @@ let narratorObj = {
 		  }
       }
 	 }
+let narratorObj2 = {
+narratorElem: document.getElementById('linebox'),
+   narratorLines: [],
+   count:0 ,
+   
+   getLine: function() {
+      if (this.count < this.narratorLines.length)
+         narratorElem.innerHTML = this.narratorLines[this.count++];
+      else {
+		  	elem.style.display='none';
+		  }
+      }
+	 }
    
 function toNextStage(){
 	window.location.href("/Deep_sleep1/deep_sleep/stage2/index.jsp");
@@ -102,13 +117,15 @@ document.getElementById('table').onclick = function() {
 	}
 }
 document.getElementById('mainroomdoor').onclick = function() {
+	elem.style.display='';
 	narratorElem = document.getElementById('linebox');
-	narratorObj.narratorLines = downStairLines;
-	narratorElem.onclick = narratorObj.getLine;
-	narratorObj.count=0;
+	narratorObj2.narratorLines = mainRoomLines;
+	narratorElem.onclick = narratorObj2.getLine;
+	narratorObj2.count=0;
 	if(!provisos.includes("안방")){
 		provisos.push("안방");
 		}
+
 	}
 /*document.getElementById('clawHammer').onclick = function() {
 	narratorElem = document.getElementById('linebox');
@@ -125,3 +142,4 @@ document.getElementById('mainroomdoor').onclick = function() {
 		}
 	}*/
 narratorObj.getLine = narratorObj.getLine.bind(narratorObj);
+narratorObj2.getLine = narratorObj2.getLine.bind(narratorObj2);

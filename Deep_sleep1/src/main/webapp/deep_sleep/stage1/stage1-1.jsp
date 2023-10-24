@@ -173,7 +173,7 @@
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 </head>
 <body style="background-color:  black;">
-	<script src="/Deep_sleep1/deep_sleep/modal/modal.js"></script>
+	
     <div class="linesbox" id="linebox" style="z-index: 1;">
     	무엇을 조사해볼까?
     </div>
@@ -211,7 +211,7 @@
                 <button id="close-modal2">돌아가기</button>
             </div>
         </div>
-   
+    <script src="/Deep_sleep1/deep_sleep/modal/modal.js"></script>
    	<script src="/Deep_sleep1/deep_sleep/scripts/stage1/s1_1.js"></script>
 </body>
 </html>

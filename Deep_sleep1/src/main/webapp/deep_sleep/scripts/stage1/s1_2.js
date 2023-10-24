@@ -1,3 +1,4 @@
+let proviso_count=0;
 let doorlockLines=[
 				"\"혹시 배터리가 다 닳아서 안되는걸까?\"",
 				"그럼 배터리만 가지고 있으면  간단히 해결할 수 있지 않은가?",
@@ -52,7 +53,13 @@ let narratorObj = {
 	 }
    
 function toNextStage(){
-	window.location.href("/Deep_sleep1/deep_sleep/stage2/index.jsp");
+		narratorElem.onclick=function(){
+		narratorObj.narratorLines=S1EndingLines
+		narratorElem.onclick=narratorObj.getLine;
+		}
+		if(narratorObj.count>S1EndingLines.length){
+		window.location.href("/Deep_sleep1/deep_sleep/stage2/index.jsp");
+		}
 }
 
 document.getElementById('doorlock').onclick = function() {
@@ -96,13 +103,20 @@ document.getElementById('clawHammer').onclick = function() {
 	narratorObj.narratorLines = clawhammerLines;
 	narratorElem.onclick = narratorObj.getLine;
 	narratorObj.count=0;
+	proviso_count++;
 	if(!provisos.includes("장도리")){
-		provisos.push("장도리");
-		narratorElem.onclick=function(){
-		narratorObj.narratorLines=S1EndingLines
-		narratorElem.onclick=narratorObj.getLine;
-		}
-		window.onload(toNextStage());
-		}
+		provisos.push("장도리");}
 	}
+	
+document.getElementById('linebox').onclick=function(){
+	if(provisos.includes("장도리")&&proviso_count>=1){
+		narratorObj.narratorLines=S1EndingLines
+		document.getElementById('linebox').onclick=narratorObj.getLine
+		narratorObj.count=0;
+		document.getElementById('linebox').onclick=function(){
+			window.location.href="Deep_sleep1/deep_sleep/stage1/stage1org.jsp"
+		}
+		
+	}
+}
 narratorObj.getLine = narratorObj.getLine.bind(narratorObj);

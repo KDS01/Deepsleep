@@ -220,8 +220,8 @@
             <button id="close-modal2">돌아가기</button>
         </div>
     </div>
-     <script src="/Deep_sleep1/deep_sleep/modal/modal.js"></script>
-    <script src="/Deep_sleep1/deep_sleep/scripts/stage1/s1_2.js"></script>
+     <script src="../modal/modal.js"></script>
+    <script src="../scripts/stage1/s1_2.js"></script>
    
       
     
